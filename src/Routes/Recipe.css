@@ -1,0 +1,181 @@
+.container-recipe {
+  height: 1000px;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.prepare-recipe {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 600px;
+  margin-top: 1rem;
+}
+
+.info-recipe {
+  position: absolute;
+  top: 60px;
+  right: 35px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: #f8f8f8;
+  color: #f36405;
+}
+
+.info-recipe p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.calories:after {
+  content: "Calories";
+  display: none;
+  position: absolute;
+  top: -25px;
+  width: 60px;
+  padding: 5px;
+  height: 10px;
+}
+.serving:after {
+  content: "Serving";
+  display: none;
+  position: absolute;
+  top: -25px;
+  width: 60px;
+  padding: 5px;
+  height: 10px;
+}
+.difficulty:after {
+  content: "Difficulty";
+  display: none;
+  position: absolute;
+  top: -25px;
+  width: 60px;
+  padding: 5px;
+  height: 10px;
+}
+.time:after {
+  align-items: center;
+  content: "Time";
+  display: none;
+  position: absolute;
+  top: -20px;
+  width: 20px;
+}
+
+.calories:hover:after,
+.serving:hover:after,
+.time:hover:after,
+.difficulty:hover:after {
+  display: flex;
+}
+
+.desc-recipe {
+  color: #f36405;
+  text-align: center;
+}
+
+.desc-recipe img {
+  width: 40dvw;
+  max-width: 500px;
+  border-radius: 20px;
+  margin-top: 1rem;
+}
+
+.rating-recipe {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 10px;
+  height: 30px;
+}
+.rating-recipe p {
+  font-size: 1.2rem;
+  margin-top: -px;
+}
+#count {
+  margin-top: 10px;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+#count:hover {
+  transform: scale(1.05);
+}
+
+.comment {
+  background-color: #f8f8f8;
+  margin: 10px;
+}
+
+.ingredients,
+.instructions {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  width: 300px;
+}
+
+.ingredients:hover,
+.instructions:hover,
+.info-recipe:hover {
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+}
+
+.ingredients li,
+.instructions li {
+  margin: 10px;
+}
+
+.ingredients h2,
+.instructions h2 {
+  color: #f36405;
+}
+
+.container-review {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 3rem;
+}
+
+.comment {
+  max-width: 500px;
+  width: 60%;
+  padding: 1rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.comment p:first-child {
+  font-size: 18px;
+  color: #f36405;
+}

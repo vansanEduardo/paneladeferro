@@ -1,0 +1,24 @@
+.star-outer {
+  position: relative;
+}
+
+.star-outer:before {
+  content: "\002605 \002605 \002605 \002605 \002605";
+  color: #000;
+  width: 100%;
+  font-size: 1.2em;
+}
+.star-inner:before {
+  content: "\002605 \002605 \002605 \002605 \002605";
+  color: gold;
+  width: 100%;
+  font-size: 1.2em;
+}
+
+.star-inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  overflow: hidden;
+}

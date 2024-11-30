@@ -1,0 +1,15 @@
+.loading{
+    font-size: 2rem;
+    color: #f36405;
+    animation: rotate 0.5s linear infinite;
+}
+
+
+
+
+@keyframes rotate {
+    to{
+        transform: rotate(360deg);
+    }
+    
+}

@@ -1,0 +1,59 @@
+#post-container {
+  flex: 3 1 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+ 
+}
+
+.post {
+  height: 800px;
+  margin-bottom: 2.5rem;
+  padding: 1rem;
+}
+.post img {
+  width: 600px;
+  height: 600px;
+  margin-bottom: 1rem;
+}
+
+.title,
+.description,
+.author {
+  margin-bottom: 2rem;
+}
+.description {
+  margin: auto 3rem;
+}
+.btnRecipe {
+  width: 100px;
+  height: 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: #ff5614;
+  color: #fff;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.author {
+  margin-top: 2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.posts-skeleton{
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+.post-skeleton{
+  margin: 0 6rem;
+}

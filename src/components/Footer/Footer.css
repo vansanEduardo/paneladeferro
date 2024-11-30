@@ -1,0 +1,61 @@
+
+#footer{
+    border-top: 2px solid #ddd;
+    padding: 3rem;
+    justify-content:space-around;
+    display: flex;
+   
+
+    background-color: #d3d3d3;
+}
+
+#form-footer input[type="submit"] {
+    background-color: #ff5614;
+    width: 70px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.4s;
+}
+  
+#form-footer input[type="submit"]:hover{
+    color: #000;
+    width: 100px;
+}
+
+#form-footer input{
+    height: 40px;
+}
+
+
+#form-footer{
+    max-width: 30%;
+}
+
+#form-footer h2, label, input{
+    margin-bottom: 10px;
+}
+
+.logo-footer{
+    width: 100px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+@media (max-width:450px){
+    .container{
+        flex-wrap: wrap;
+    }
+
+    header p{
+        display: none;
+    }
+
+    #form-footer{
+        max-width: 500px;
+    }
+
+    .logo-footer{
+        display: none;
+    }
+}
