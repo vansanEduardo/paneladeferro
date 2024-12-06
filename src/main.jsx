@@ -6,6 +6,9 @@ import {createBrowserRouter,RouterProvider} from "react-router-dom"
 import Home from './Routes/Home.jsx'
 import Recipe from './Routes/Recipe.jsx'
 import Recipes from './Routes/Recipes.jsx'
+import SearchRecipes from './Routes/SearchRecipes.jsx'
+import ManagePosts from './Routes/ManagePosts.jsx'
+import EditRecipe from './Routes/EditRecipe.jsx'
 
 
 const router = createBrowserRouter([
@@ -22,6 +25,18 @@ const router = createBrowserRouter([
         element: <Recipes/>,
       },
       {
+        path: "/search",
+        element: <SearchRecipes/>,
+      },
+      {
+        path: "/manage-posts",
+        element: <ManagePosts/>,
+      },
+      {
+        path: "/edit-recipe/:id",
+        element: <EditRecipe/>,
+      },
+      {
         path: "/recipe/:id",
         element: <Recipe/>,
       },
@@ -31,6 +46,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    
     <RouterProvider router={router} />
   </StrictMode>
 );

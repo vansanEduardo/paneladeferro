@@ -1,22 +1,50 @@
-import  "./Navbar.css";
+import Search from "../Home/Search";
+import "./Navbar.css";
 import { Link } from "react-router-dom";
-const Navbar = () => {
-  return (
-    <div>
-      <header>
-        <img src="./panela.png" alt="Logo do Blog" class="logo" />
-        <h1>Panela De Ferro</h1>
-        <p>Blog De Culinaria, Gastronomia e Receitas</p>
-      </header>
+import { MdMenu } from "react-icons/md";
+import { useState } from "react";
+import { MdClose } from "react-icons/md";
 
-      <nav id="navbar">
-        <div id="navbar-inner">
-       <Link to={"/"}>Home</Link>
-       <Link to={"/recipes"}>Recipes</Link>
-          <a href="#">Sobre</a>
-        </div>
-      </nav>
-    </div>
+
+const Navbar = () => {
+  const [menu, setMenu] = useState(0);
+
+  const showMenu = (e) => {
+    e.preventDefault();
+    if (menu === 0) {
+      setMenu(1);
+    } else {
+      setMenu(0);
+      
+    }
+  };
+
+  return (
+    <nav>
+      <h1>PanelaDeFerro</h1>
+      <div className={`links ${menu ? "menu-links" : ""}`} >
+        <Link to={"/"}>
+          <p>Home</p>
+        </Link>
+        <Link to={"/recipes"}>
+          <p>Recipes</p>
+        </Link>
+        <Link to={""}>
+          <p>About</p>
+        </Link>
+        <Link to={"/manage-posts"}>
+          <p>Manage</p>
+        </Link>
+        <div className="search">
+        <Search />
+      </div>
+
+      </div>
+      
+      <div className="menu" onClick={(e) => showMenu(e)}>
+        {!menu ? <MdMenu /> : <MdClose />}
+      </div>
+    </nav>
   );
 };
 

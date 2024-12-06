@@ -8,13 +8,17 @@ import { IoPeople } from "react-icons/io5";
 import { FaFireAlt } from "react-icons/fa";
 import comments from "../data/comments";
 import Loading from "../components/Loading/Loading";
+
+
 const Recipe = () => {
   const [recipe, setRecipe] = useState([]);
   const [show, setShow] = useState(0);
 
   const handleReview = () => {
+   
     if (show === 0) {
       setShow(1);
+      window.scroll(0,2000)
     } else {
       setShow(0);
     }
@@ -41,18 +45,9 @@ const Recipe = () => {
     <div className="container-pagerecipe">
       <div className="container-recipe">
         <div className="desc-recipe">
-          <h1>{recipe.name}</h1>
-          <img src={recipe.image} alt="" />
 
-          <div className="rating-recipe">
-            <StarsRating value={recipe.rating} />
-            <p>{recipe.rating}</p>
-          </div>
-          <p id="count" onClick={handleReview}>
-            Reviews: ({recipe.reviewCount})
-          </p>
-        </div>
-        <div className="info-recipe">
+          <h1>{recipe.name}</h1>
+          <div className="info-recipe">
           <p className="calories">
             <FaFireAlt />
             {recipe.caloriesPerServing}
@@ -68,6 +63,18 @@ const Recipe = () => {
             {recipe.prepTimeMinutes}
           </p>
         </div>
+          <img src={recipe.image} alt="" />
+
+          <div className="rating-recipe">
+            <StarsRating value={recipe.rating} />
+            <p>{recipe.rating}</p>
+          </div>
+          <p id="count" onClick={handleReview}>
+            Reviews: ({recipe.reviewCount})
+          </p>
+         
+        </div>
+        
 
         <div className="prepare-recipe">
           <div className="ingredients">

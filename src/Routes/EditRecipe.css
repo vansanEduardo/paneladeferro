@@ -1,0 +1,78 @@
+.container-editrecipe {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  position: relative;
+}
+
+.container-editrecipe h2 {
+  color: #f35678;
+}
+
+.container-editrecipe input {
+  width: 100%;
+  border: none;
+  height: 30px;
+  background-color: transparent;
+  border-bottom: 1px solid #000;
+  outline: none;
+}
+.info-editrecipe {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 500px;
+  background-color: #f8f8f8;
+  padding: 2rem;
+}
+
+.prepare-editrecipe {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  width: 700px;
+  margin-left: 2rem;
+}
+
+.editrecipe-ingredients,
+.editrecipe-instructions {
+  background-color: #f8f8f8;
+  width: 500px;
+  min-height: 300px;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.editrecipe-ingredients ul,
+.editrecipe-instructions ol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-save-edit {
+  position: absolute;
+  bottom: 0;
+}
+
+.btn-save-edit button {
+  width: 200px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  background-color:rgb(98, 211, 98);
+}
+
+.btn-save-edit button:hover {
+  transform: scale(1.05);
+  background-color: #fff;
+  color: rgb(98, 211, 98);
+  border: 1px solid rgb(98, 211, 98);
+}
+.btn-save-edit button:active {
+  transform: scale(1);
+}

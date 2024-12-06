@@ -1,55 +1,73 @@
-
-#sidebar{
-    flex: 1 1 0;
+#sidebar {
+  flex: 1 1 0;
 }
 
-#search-bar,
 #categories,
-#tags{
-    padding: 1.5rem;
-    border: 1px solid #ddd;
-    margin-bottom: 1rem;
+#tags {
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
+  position: relative;
+  width: 100%;
 }
 
-#search-bar h4,
+#categories ul li {
+  margin-bottom: 10px;
+}
 #categories h4,
-#tags h4{
+#tags h4 {
   font-size: 1.5rem;
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
-#search-bar form{
-    display: flex;
+.container-categories ul li a:hover{
+    color:#f36405;
 }
 
-#search-bar input{
-    padding: 0.5rem 1rem;
-    border: 1px solid #ddd;
+.search-bar {
+ height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
 }
 
-#search-bar input[type="submit"] {
-    background-color: #ff5614;
-    color: #fff;
-    cursor: pointer;
-    transition: 0.4s;
-}
-  
-#search-bar input[type="submit"]:hover{
-    color: #000;
+.search-bar input {
+  height: 30px;
+  border-radius: 20px 0 0 20px;
+  outline: none;
+  border: none;
+  padding: 0.5rem;
 }
 
-#categories li{
-    margin-bottom: 1rem;
+.btn-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 0 20px 20px 0;
+  background-color: #0000003f;
 }
 
-.tags-container{
-    display: flex;
-    max-width: 250px;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+.btn-search a:hover{
+  color: #fff;
 }
-.tags-container a{
-    background-color: #ddd;
-    padding: 0.5rem 0.7rem;
-    border-radius: 0.3rem;
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tags-container a {
+  background-color: #ddd;
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.3rem;
+}
+
+.acord-list {
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  cursor: pointer;
 }

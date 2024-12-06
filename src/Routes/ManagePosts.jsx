@@ -5,10 +5,8 @@ import StarsRating from "../components/Home/StarsRating";
 import { Link } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import Tags from "../components/Home/Tags.jsx";
-import Categories from "../components/Home/Categories.jsx";
 
-const Recipes = () => {
+const ManagePosts = () => {
   const [recipes, setRecipes] = useState([]);
 
   const getRecipes = async () => {
@@ -26,12 +24,17 @@ const Recipes = () => {
     getRecipes();
   }, []);
 
+  const deletePost = (deleteId) => {
+    const newRecipes = recipes.filter((recipe) => recipe.id != deleteId);
+    setRecipes(newRecipes);
+    console.log(deleteId);
+
+    // Adicionar na localstorage para realizar a mudaça visual no site
+  };
+
   return (
     <div className="container-recipes">
-      <Tags />
-      <Categories />
-
-      <h1>All Recipes </h1>
+      <h1>Manage Recipes </h1>
       <div className="recipes">
         {recipes.length === 0
           ? [...Array(18)].map((_, index) => (
@@ -60,14 +63,23 @@ const Recipes = () => {
                     <li>PreparationTime: {recipe.prepTimeMinutes}m</li>
                     <li>Serving: {recipe.servings}</li>
                   </ul>
-                  <div className="meal-type">
-                    {recipe.mealType?.map((type, index) => (
-                      <Link to={`/search?meal-type/${type}`}>
-                        {index < 2 ? <p>{type}</p> : ""}
-                      </Link>
-                    ))}
-                  </div>
+                  <div className="btns-manage">
+                  <Link to={`/edit-recipe/${recipe.id}`}>
+                    {" "}
+                    <button className="edit">Edit</button>
+                  </Link>
+                  <button
+                    value={recipe.id}
+                    className="delete"
+                    onClick={(e) => {
+                      deletePost(e.target.value);
+                    }}
+                  >
+                    Delete
+                  </button>
                 </div>
+                </div>
+                
               </Link>
             ))}
       </div>
@@ -75,4 +87,4 @@ const Recipes = () => {
   );
 };
 
-export default Recipes;
+export default ManagePosts;

@@ -1,14 +1,12 @@
-
 import "./Footer.css";
 
 const Footer = () => {
   return (
     <footer id="footer">
       <form id="form-footer">
-        <h2>Assinar Blog por Email</h2>
+        <h2>Subscribe to Blog by Email</h2>
         <label for="email">
-          Digite seu Endereço de e-mail para receber notificações de novas
-          publicações
+          Enter your email address to receive notifications of new publications
         </label>
         <input
           type="email"
@@ -17,10 +15,8 @@ const Footer = () => {
           required
         />
         <input type="submit" value="Enviar" />
-        <p>Junte se a 100mil outros assinantes</p>
+        <p>Join 100 thousand other subscribers</p>
       </form>
-      <img src="./panela.png" alt="Logo do Blog" class="logo-footer" />
-     
     </footer>
   );
 };

@@ -1,48 +1,100 @@
-header{
-    background-color: #fff;
-    width: 100%;
-    height: 150px;
-    display: flex;
-    justify-content: center;
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding: 1rem;
+  background-color: #f36405f1;
+  border-bottom: 1px solid #f8f8f8;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+nav h1{
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+.links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
-header h1{
-    margin-top: 30px;
-    font-family:fantasy;
-    font-size: 50px;
-    color: #ff5614;
-    
-}
-
-header .logo{
-    margin: 5px;
-}
-
-header p{
-    position: absolute;
-    margin: 130px 0 0 190px;
-    color: #d3d3d3;
-    font-weight: bold;
+.links a {
+  position: relative;
   
 }
+.search{
+  margin-top: 10px;
+}
+.links a:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  height: 2px;
+  opacity: 0;
+}
+.links a:hover {
+  transform: scale(1.05);
+  font-weight: bold;
+}
 
-#navbar{
-    background-color: #ff5614;
-    height: 40px;
+.links a:hover:after {
+  opacity: 1;
+  transition: 0.5s ease;
+  animation: selectRoute 0.5s linear;
+}
+
+.menu{
+  display: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+@keyframes selectRoute {
+  from{
+    width: 0%;
+  }
+}
+
+.links p {
+  color: #fff;
+}
+
+.active {
+  color: blue;
+}
+
+
+@media (max-width:900px) {
+  .menu{
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
- #navbar-inner a{
-    color: #fff;
-    text-transform: uppercase;
-    margin: 15px;
-    transition: 0.4s;
-    font-weight: bold;
-}
-
-#navbar-inner a:hover{
-    color: #000000;
+  }
+  .links{
+    display: none;
+  }
+  .menu-links{
+   justify-content: center;
+    background-color: #f36405f1;
+    position: absolute;
+    flex-wrap: wrap;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+  }
+  nav{
+    border: none;
+    justify-content: space-between;
+  }
 }

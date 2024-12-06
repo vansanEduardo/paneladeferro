@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
   body,html{
@@ -15,6 +16,84 @@ a{
   color: black;
 }
 
-a:hover{
-  color: #ff5614;
+/*  css card */
+
+.recipe-card {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  height: 200px;
+  border: 2px solid #f8f8f8;
+  background-color: #ffffff;
+  border-radius: 20px;
+  transition: ease-out 0.3s;
+}
+
+.recipe-card:hover {
+  box-shadow: 4px 8px 16px rgba(185, 185, 185, 0.3);
+  transform: translatey(-5px) scale(1.05);
+}
+
+.recipe-card h3{
+  font-size: 15px;
+  color:#f36405f1 ;
+}
+.recipe-card ul{
+  margin-left: 1rem;
+}
+.recipe-card li{
+  font-size: 14px;
+}
+.recipe-card:active {
+  transform: translatey(0) scale(1);
+}
+.img-recipe-card {
+  height: 100%;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.img-recipe-card img {
+  margin: 1rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 0.6rem;
+}
+
+.meal-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.meal-type p {
+  background-color: #f8f8f8;
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+.meal-type p:hover {
+  border: 1px solid #000;
+}
+
+.meal-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.meal-type p {
+  background-color: #f8f8f8;
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+.meal-type p:hover {
+  border: 1px solid #f36405f1;
+}
+
+.rating{
+  font-size: 12px;
 }
